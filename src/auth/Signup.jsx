@@ -26,6 +26,7 @@ const Signup = () => {
       validemail()
     }
     else {
+      setvalidation(false)
       setautherror("name is to short")
     }
   }
@@ -36,6 +37,7 @@ const Signup = () => {
     }
     else {
       setautherror("email not valid , please enter valid email")
+      setvalidation(false)
     }
   }
   function validpassword() { 
@@ -43,7 +45,9 @@ const Signup = () => {
       setvalidation(true)
       setautherror("")
     }
-    else{setautherror("password and confirm password must be same")}
+    else{
+      setautherror("password and confirm password must be same"),
+       setvalidation(false)}
   }
 
   const funcvalidation = () => {

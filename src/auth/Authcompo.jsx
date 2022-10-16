@@ -139,7 +139,7 @@ export function Passwordchangedfailed(){
       <h1>pasword change failed</h1>
       <p>{result}</p>
      </header>
-         <button className={style.auth_btn} style={{backgroundColor:red[500]}} onPointerOver={(e)=>{e.target.style.backgroundColor= red[700]}}
+         <button className={style.auth_btn} style={{backgroundColor:red[500] , boxShadow:"1px 7px 10px rgba(212, 29, 69, 0.25)"}} onPointerOver={(e)=>{e.target.style.backgroundColor= red[700]}}
          onPointerLeave={(e)=>{e.target.style.backgroundColor= red[500]}}>go back</button>
      </section>
    </main>

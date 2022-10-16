@@ -1,5 +1,5 @@
 :root {
-    --primary-auth-color: rgb(212, 29, 212);
+    --primary-auth-color: rgba(212, 29, 130, 0.25);
     --primary-auth:0, 128, 0;
     /* --primary-auth: 5, 100, 36; */
     --link-color: 0, 68, 255;
