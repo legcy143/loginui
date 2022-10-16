@@ -1,0 +1,400 @@
+:root {
+    --primary-auth-color: rgb(212, 29, 212);
+    --primary-auth:0, 128, 0;
+    /* --primary-auth: 5, 100, 36; */
+    --link-color: 0, 68, 255;
+}
+
+.main_container {
+    display: grid;
+    place-items: center;
+    min-height: 95vh;
+}
+
+.auth_container {
+    width: 95%;
+    max-width: 800px;
+    background-color: rgba(241, 241, 241, 0.897);
+    border-radius: 5px;
+    overflow: hidden;
+    color: black;
+}
+
+.container_top {
+    margin: auto;
+    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.container_top a {
+    color: rgba(var(--link-color), 1);
+    font-weight: bold;
+    transition: 0.10s ease;
+}
+
+.container_top img {
+    margin: auto;
+    width: 50%;
+    max-width: 250px;
+}
+
+::selection {
+    background-color: rgba(var(--primary-auth), 1);
+    color: white;
+}
+
+.auth_form {
+    border-radius: 12px;
+    padding: 1rem 0.7rem;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 410px;
+    background-color: rgba(241, 241, 241, 0.932);
+}
+
+.auth_form header {
+    margin: 1rem 1rem;
+}
+
+.auth_form header h1 {
+    text-transform: capitalize;
+    font-size: clamp(1.6rem, calc(1vw + 0.5rem), 2rem);
+}
+
+.auth_form header p {
+    text-transform: capitalize;
+    opacity: 0.7;
+    font-size: clamp(0.8rem, calc(1vw + 0.1rem), 0.9rem);
+}
+.auth_form header span{
+    text-transform: capitalize;
+    height: 15px;
+    display: block;
+    margin: 0.5rem 0rem;
+    color: red;
+    font-size: clamp(0.8rem, calc(1vw + 0.1rem), 0.9rem);
+}
+
+.inputs {
+    margin: 1rem auto;
+    position: relative;
+}
+
+.inputs svg {
+    position: absolute;
+    height: 100%;
+    width: 2rem;
+    padding: 5px;
+    color: rgba(var(--primary-auth), 0.9);
+}
+.input_password .eye_icon{
+    position: absolute;
+    height: 100%;
+    color: rgba(var(--primary-auth), 0.9);
+    top: 0%;
+    right: 0%;
+}
+.input_password .eye_icon svg{
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    width: 2rem;
+    padding: 5px;
+}
+.inputs input {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    padding-left: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    border: 2px solid transparent;
+    outline: none;
+    background-color: rgba(var(--primary-auth), 0.08);
+    color: rgba(var(--primary-auth));
+    transition: 0.30s ease;
+}
+
+.input_password input {
+    padding-right: 2rem;
+}
+.inputs input::placeholder {
+    color: inherit;
+}
+
+.inputs input:hover {
+    transition: 0.30s ease;
+    border: 2px solid rgba(var(--primary-auth), 0.1);
+    background-color: rgba(var(--primary-auth), 0.2);
+}
+
+.inputs input:focus {
+    transition: 0.30s ease;
+    border: 2px solid rgba(var(--primary-auth), 1);
+    background-color: rgba(var(--primary-auth), 0.15);
+}
+
+.tandc {
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tandc input {
+    width: 20px;
+    aspect-ratio: 1/1;
+    border-radius: 45px;
+}
+
+.tandc :checked {
+    accent-color: rgba(var(--primary-auth));
+}
+
+.tandc p {
+    opacity: 0.8;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    color: rgba(var(--primary-auth));
+}
+
+.tandc p a {
+    margin: 0px 5px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.auth_btn {
+    margin: 0.5rem auto 1rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+    width: 100%;
+    border-radius: 12px;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-color: rgba(var(--primary-auth), 0.8);
+    color: white;
+    box-shadow: 1px 7px 10px rgba(var(--primary-auth), 0.25);
+    transition: 0.30s ease;
+    outline: none;
+}
+
+.auth_btn:hover {
+    transition: 0.30s ease;
+    background-color: rgba(var(--primary-auth));
+}
+.auth_btn:active{
+    transition: 0.30s ease;
+    transform: scale(0.95);
+}
+.or {
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.or hr {
+    width: 40%;
+    height: 2px;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.329);
+    border: none;
+}
+
+.login_with {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.login_with div {
+    margin: 1rem auto;
+    padding: 0.5rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    border: 2px solid rgba(var(--primary-auth), 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.30s ease;
+    box-shadow: 1px 7px 10px rgba(var(--primary-auth), 0.15);
+}
+
+.login_with div:hover {
+    opacity: 1;
+    background: rgba(var(--primary-auth), 0.4);
+    background-blend-mode: soft-light;
+}
+
+.switch_method {
+    margin: 1rem auto;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.forgetpass_form,
+.password_chnaged {
+    border-radius: 12px;
+    padding: 2rem 0.9rem;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 410px;
+    background-color: rgba(241, 241, 241, 0.932);
+    color: black;
+}
+
+.forgetpass_formheader {
+    margin: 1rem 1rem;
+}
+
+.forgetpass_form header {
+    margin: 0rem auto 1rem;
+}
+
+.forgetpass_form header h1 {
+    text-transform: capitalize;
+    font-size: clamp(1.2rem, calc(1vw + 0.9rem), 1.5rem);
+}
+
+.forgetpass_form header p {
+    text-transform: capitalize;
+    opacity: 0.7;
+    font-size: clamp(0.8rem, calc(1vw + 0.1rem), 0.9rem);
+}
+
+.input_otp {
+    width: 50px;
+}
+
+.otp_input_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.otp_input_container input {
+    padding: 0.1rem;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    height: 40px;
+    aspect-ratio: 1/1;
+    line-height: 40px;
+    border: 2px solid rgba(var(--primary-auth), 0.04);
+    outline: none;
+    background-color: rgba(var(--primary-auth), 0.1);
+    color: rgba(var(--primary-auth));
+    transition: 0.30s ease;
+    text-align: center;
+}
+
+
+.otp_input_container input::placeholder {
+    color: inherit;
+    opacity: 0.4;
+}
+
+.otp_input_container input:hover {
+    transition: 0.30s ease;
+    border: 2px solid rgba(var(--primary-auth), 0.1);
+    background-color: rgba(var(--primary-auth), 0.2);
+}
+
+.otp_input_container input:focus {
+    transition: 0.30s ease;
+    border: 2px solid rgba(var(--primary-auth), 1);
+    background-color: rgba(var(--primary-auth), 0.15);
+}
+
+.otp_footer {
+    margin: 1rem auto 0.4rem;
+}
+
+.timer_otp {
+    margin: 0.5rem 0rem 0rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: 3px;
+    color: rgb(var(--primary-auth));
+    cursor: pointer;
+}
+
+.otp_info p {
+    margin: 0.7rem auto;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.otp_info p span {
+    margin: 0rem 5px;
+    color: rgb(var(--primary-auth));
+    font-weight: bold;
+}
+
+.otp_info small {
+    color: rgb(var(--primary-auth));
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.password_chnaged {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.password_chnaged button {
+    margin: 1.5rem auto;
+}
+
+.password_chnaged p {
+    font-size: clamp(0.8rem, calc(1vw + 0.1rem), 0.9rem);
+    opacity: 0.8;
+}
+
+@media (max-width:600px) {
+    .main_container {
+        min-height: 100vh;
+    }
+    .auth_container {
+        width: 100%;
+        min-height: 100%;
+        border-radius: 0px;
+    }
+
+    .container_top {
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+
+    .container_top img {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .auth_form {
+        max-width: 400px;
+    }
+
+    .login_with {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
