@@ -6,22 +6,9 @@ body{
     flex-direction: column;
     min-height: 100vh;
 }
-.flex_column_center ,.join_container , .join_container form{
+.flex_column_center{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.div{
-    margin: auto;
-    width: 90vw;
-    height: 50vh;
-    border: 2px solid red;
-}
-.div p{
-    border: 2px solid green;
-    width: 100%;
-    height: 100%;
-    font-size: 90%;
-    /* font-size:clamp( 100%, calc(60% + 1rem) , 100%) ; */
 }

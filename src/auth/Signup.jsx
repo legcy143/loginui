@@ -8,6 +8,7 @@ import GoogleIcon from '@mui/icons-material/Google';
 
 import style from "./auth.module.css"
 import { Link } from 'react-router-dom';
+import { keyframes } from '@emotion/react';
 
 const Signup = () => {
   const [passtype, setpasstype] = useState("password")
@@ -21,8 +22,7 @@ const Signup = () => {
   const [autherror, setautherror] = useState("")
 
   function validname() {
-    if (username.length > 5) {
-      console.log("not valid")
+    if (username.length > 3) {
       validemail()
     }
     else {
@@ -32,7 +32,7 @@ const Signup = () => {
   }
   function validemail() {
   const regemail = /@gmail.com/
-    if (email.length >= 5) { 
+    if (email.length >= 11 && regemail.test(email) === true) { 
       validpassword()
     }
     else {
@@ -74,6 +74,9 @@ const Signup = () => {
       setconfirmpassword(""), settandc(false), setautherror("")
     }
   }
+  function xy(e){
+    console.log(e.target.code)
+  }
   return (
     <main className={style.main_container}>
       <main className={style.auth_container}>
@@ -88,7 +91,8 @@ const Signup = () => {
             <div className={style.inputs}>
               <PersonIcon />
               <input type="text" placeholder='enter your name' value={username}
-                onChange={(e) => { setusername(e.target.value); }} />
+                onChange={(e) => { setusername(e.target.value);xy(e)}}/>
+                  {/* onKeyDown={(e)=>{e.code === 'Enter' && console.log("enter")}} */}
             </div>
             <div className={style.inputs}>
               <MailIcon />
