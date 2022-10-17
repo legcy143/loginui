@@ -16,10 +16,17 @@ const Login = () => {
   const [autherror, setautherror] = useState("")
 
 
-  const funcvalidation = () => {
+const funcvalidation = () => {
     if (email.length > 0 && password.length > 0) {
-      setvalidation(true)
-      setautherror("")
+      const regemail = /@gmail.com/
+      if (regemail.test(email) === true) {
+        setvalidation(true)
+        setautherror("")
+      }
+      else{
+        setvalidation(false)
+        setautherror("please enter valid email")
+      }
     }
     else {
       setautherror("all fields required")
